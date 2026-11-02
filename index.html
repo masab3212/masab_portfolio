@@ -1,731 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Muhammad Masab - Electrical Engineer with focus on Embedded Systems, IoT, and AI" />
-    <meta name="author" content="Muhammad Masab" />
-    <title>Resume - Muhammad Masab</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    
-    <!-- Font Awesome Icons (Free Version) -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
-    <!-- AOS CSS for Animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS for Improved Styling -->
-    <link href="css/styles.css" rel="stylesheet" />
-    
-    <!-- Inline Custom Styles -->
-    <style>
-        /* Base Styles */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            overflow-x: hidden;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Roboto', sans-serif;
-        }
-        .resume-section-content {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-        .fa-ul li {
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .subheading {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        .text-primary {
-            color: #003366 !important; /* Dark Blue */
-            transition: color 0.3s ease;
-        }
-
-        /* Grey Neon Light Effects */
-        .neon-text {
-           color: #fff;
-        }
-
-
-        @keyframes greyNeonGlow {
-            from {
-                text-shadow:
-                    0 0 5px #ccc,
-                    0 0 10px #ccc,
-                    0 0 20px #ccc,
-                    0 0 30px #ccc,
-                    0 0 40px #ccc,
-                    0 0 50px #ccc,
-                    0 0 75px #ccc;
-            }
-            to {
-                text-shadow:
-                    0 0 10px #ccc,
-                    0 0 20px #ccc,
-                    0 0 30px #ccc,
-                    0 0 40px #ccc,
-                    0 0 50px #ccc,
-                    0 0 60px #ccc,
-                    0 0 100px #ccc;
-            }
-        }
-
-        /* Hero Section Styles */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            background-image: url('assets/img/background.jpg'); /* Corrected Background Image Path */
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: left;
-            transition: background-image 0.3s ease;
-        }
-        .hero-content {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 80%;
-        }
-        .hero-text {
-            max-width: 50%;
-        }
-        .hero-image {
-            max-width: 45%;
-        }
-        .hero-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeInUp 2s forwards;
-        }
-        .hero-text p {
-            font-size: 1.2em;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 2s forwards 1s;
-        }
-        .hero-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow:
-                0 0 10px #ccc,
-                0 0 20px #ccc,
-                0 0 30px #ccc,
-                0 0 40px #ccc,
-                0 0 50px #ccc,
-                0 0 75px #ccc;
-            transition: box-shadow 0.3s ease;
-        }
-        .hero-image img:hover {
-            box-shadow:
-                0 0 20px #ccc,
-                0 0 30px #ccc,
-                0 0 40px #ccc,
-                0 0 50px #ccc,
-                0 0 60px #ccc,
-                0 0 100px #ccc;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* SVG Divider Styles */
-        .svg-divider svg {
-            display: block;
-            width: 100%;
-            height: 50px;
-        }
-
-        /* Back to Top Button Styles */
-        #backToTop {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            display: none;
-            z-index: 99;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 12px;
-            border-radius: 50%;
-            font-size: 18px;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            background-color: #003366; /* Dark Blue */
-            color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-        #backToTop.visible {
-            display: block;
-            opacity: 1;
-            transform: scale(1);
-        }
-        #backToTop:not(.visible) {
-            opacity: 0;
-            transform: scale(0.5);
-        }
-
-        /* Theme Toggle Styles */
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .toggle-label {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-            cursor: pointer;
-        }
-        .toggle-label i {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #f1c40f;
-            transition: all 0.3s ease;
-        }
-        .toggle-label .fa-sun {
-            left: 8px;
-        }
-        .toggle-label .fa-moon {
-            right: 8px;
-        }
-        .toggle-ball {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 20px;
-            height: 20px;
-            background-color: #fff;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-            box-shadow: 0 0 5px rgba(0,0,0,0.3);
-        }
-        input#themeSwitch:checked + .toggle-label .toggle-ball {
-            transform: translateX(26px);
-        }
-
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        body.dark-mode .navbar-dark {
-            background-color: #1f1f1f;
-        }
-        body.dark-mode .text-primary {
-            color: #1e90ff !important; /* Lighter Blue */
-        }
-        body.dark-mode .fa-ul li {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        body.dark-mode .hero-section {
-            background-image: url('assets/img/background-dark.jpg'); /* Replace with your dark mode background image */
-        }
-
-        /* Button Hover Effect */
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.3); /* Dark Blue Shadow */
-            transition: all 0.3s ease;
-        }
-
-        /* Link Hover Effect */
-        .nav-link:hover, .social-icon:hover {
-            color: #0056b3 !important;
-            transition: color 0.3s ease;
-        }
-
-        /* List Items Hover Effect */
-        .fa-ul li:hover {
-            background-color: rgba(0, 51, 102, 0.1); /* Dark Blue Shade */
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Fade-in Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Additional Animations for Scroll Direction */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-down {
-            opacity: 0;
-            transform: translateY(-40px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-up.fade-visible,
-        .fade-in-down.fade-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Pop-In Animation */
-        .pop-in {
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .pop-in.fade-visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* Pop-Out Animation */
-        .pop-out {
-            opacity: 1;
-            transform: scale(1);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .pop-out.fade-visible {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        /* Progress Bar Styles */
-        .progress {
-            height: 20px;
-            margin-bottom: 15px;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            line-height: 20px;
-            width: 0%;
-            transition: width 2s ease-in-out;
-        }
-
-        /* Language and Skills Sections */
-        .skills-section, .languages-section {
-            margin-top: 30px;
-        }
-
-        /* Neon Effect Around Sidebar Image */
-        .img-profile {
-            position: relative;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            box-shadow:
-                0 0 10px #ccc,
-                0 0 20px #ccc,
-                0 0 30px #ccc,
-                0 0 40px #ccc,
-                0 0 50px #ccc,
-                0 0 75px #ccc;
-            transition: box-shadow 0.3s ease;
-        }
-        .img-profile:hover {
-            box-shadow:
-                0 0 20px #ccc,
-                0 0 30px #ccc,
-                0 0 40px #ccc,
-                0 0 50px #ccc,
-                0 0 60px #ccc,
-                0 0 100px #ccc;
-        }
-
-        /* Shade Change After Headings */
-        h2, h3, h4 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-text, .hero-image {
-                max-width: 100%;
-            }
-            .hero-text h1 {
-                font-size: 2em;
-            }
-            .hero-text p {
-                font-size: 1em;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Masab | Data Center Electrical Engineer</title>
+<meta name="description" content="Muhammad Masab, Electrical Engineer in Lahore working on Tier III and AI data center power, cooling and fire system design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F3F4F1}
+*{box-sizing:border-box}
+a{color:#0E1A24}a:hover{color:#B4380A}
+#work a:hover{color:#F08A5D}
+a:focus-visible{outline:2px solid #B4380A;outline-offset:3px}
+@media (max-width:420px){#work article{padding:24px!important}}
+@media (max-width:760px){#work div[style*="minmax(340px"]{grid-template-columns:1fr!important}}
+</style>
 </head>
-<body id="page-top">
-    <!-- Hero Section -->
-    <header class="hero-section parallax" data-speed="0.3">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="neon-text">Electrical Engineer <br></h1>
-                <p class="neon-text">Specializing in Internet of Things (IoT), PLC and Machine Learning</p>
-            </div>
-            <div class="hero-image">
-                <img src="" alt="" />
-            </div>
-        </div>
-    </header>
+<body>
+<div style="background: #F3F4F1; color: #0E1A24; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none neon-text">Muhammad Masab</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile Picture" />
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <!-- Navigation Links with data-aos for animations -->
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-aos="fade-down">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education" data-aos="fade-down" data-aos-delay="100">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience" data-aos="fade-down" data-aos-delay="200">Internships</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" data-aos="fade-down" data-aos-delay="300">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" data-aos="fade-down" data-aos-delay="400">Projects</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#extracurricular" data-aos="fade-down" data-aos-delay="700">Extracurricular</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#languages" data-aos="fade-down" data-aos-delay="800">Languages</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications" data-aos="fade-down" data-aos-delay="1000">Publications</a></li>
-            </ul>
-            <!-- Theme Toggle -->
-            <div class="theme-toggle">
-                <input type="checkbox" id="themeSwitch" />
-                <label for="themeSwitch" class="toggle-label">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <span class="toggle-ball"></span>
-                </label>
-            </div>
-        </div>
-    </nav>
+<header style="border-bottom: 1px solid #D5D8D2">
+<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 15px; text-decoration: none; letter-spacing: 0.04em">MASAB / DC ENGINEERING</a>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px">
+<a href="#work" style="text-decoration: none; padding: 10px 0">Projects</a>
+<a href="#skills" style="text-decoration: none; padding: 10px 0">Skills</a>
+<a href="#certs" style="text-decoration: none; padding: 10px 0">Certifications</a>
+<a href="#contact" style="text-decoration: none; padding: 10px 0">Contact</a>
+</div>
+</nav>
+</header>
 
-    <!-- Page Content -->
-    <div class="container-fluid p-0">
-        <!-- About Section -->
-        <section class="resume-section" id="about" data-aos="fade-up">
-            <div class="resume-section-content">
-                <h1 class="mb-0 fade-in">
-                    Muhammad
-                    <span class="text-primary">Masab</span>
-                </h1>
-                <div class="subheading mb-5 fade-in">
-                    Lahore, Pakistan · +92-325-6247847 ·
-                    <a href="mailto:masabtariq6@gmail.com">masabtariq6@gmail.com</a>
-                </div>
-                <p class="lead mb-5 fade-in">
-                    Electrical Engineer with a solid foundation in circuit analysis, power electronics, embedded systems, and automation using microcontrollers like STM32, Arduino, and ESP32. Experienced in PCB design, sensor integration, and real-time data acquisition. Currently learning Programmable Logic Controllers (PLCs) and industrial control systems. In parallel, an AI Practitioner with expertise in Machine Learning (ML), Deep Learning (DL), Computer Vision (CV), and Internet of Things (IoT), with a focus on Explainable AI (XAI) and Large Language Models (LLMs). Skilled in Python, MATLAB, and embedded C, aiming to integrate intelligent algorithms with real-world electrical systems for impactful, sustainable solutions.
-                </p>
-                <div class="social-icons fade-in">
-                    <a class="social-icon" href="https://www.linkedin.com/in/muhammad-masab2217" data-aos="zoom-in"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://wa.me/923036801890" target="_blank" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>                    
-                </div>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 72px">
+<p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B4380A">ELECTRICAL ENGINEER · DATA CENTER DESIGN</p>
+<h1 style="margin: 0; font-size: clamp(44px, 7vw, 88px); line-height: 1.02; font-weight: 700; letter-spacing: -0.02em">Muhammad Masab</h1>
+<p style="margin: 28px 0 0; max-width: 720px; font-size: 21px; line-height: 1.5; color: #33424E">I design and review power, cooling and safety systems for Tier III data centers, and lately for AI racks running GB300 and Vera Rubin. I work at DWP Technologies in Lahore, a Huawei partner that also delivers Schneider Electric and Vertiv solutions.</p>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="mailto:masabtariq6@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #0E1A24; color: #F3F4F1; text-decoration: none; font-weight: 500; border-radius: 4px">Email me</a>
+<a href="https://linkedin.com/in/muhammad-masab3212" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #0E1A24; text-decoration: none; font-weight: 500; border-radius: 4px">LinkedIn</a>
+</div>
+<dl style="margin: 64px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border-top: 1px solid #D5D8D2">
+<div style="padding: 20px 20px 20px 0; border-bottom: 1px solid #D5D8D2">
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #56636E">BASED IN</dt>
+<dd style="margin: 4px 0 0; font-weight: 500">Lahore, Pakistan</dd>
+</div>
+<div style="padding: 20px 20px 20px 0; border-bottom: 1px solid #D5D8D2">
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #56636E">OPEN TO</dt>
+<dd style="margin: 4px 0 0; font-weight: 500">Relocation abroad</dd>
+</div>
+<div style="padding: 20px 20px 20px 0; border-bottom: 1px solid #D5D8D2">
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #56636E">EDUCATION</dt>
+<dd style="margin: 4px 0 0; font-weight: 500">BSc Electrical Engineering, UET Lahore</dd>
+</div>
+<div style="padding: 20px 20px 20px 0; border-bottom: 1px solid #D5D8D2">
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #56636E">NOW STUDYING</dt>
+<dd style="margin: 4px 0 0; font-weight: 500">NVIDIA NCA-AIIO</dd>
+</div>
+</dl>
+</section>
 
-        <!-- Education Section -->
-        <section class="resume-section" id="education" data-aos="fade-right">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Engineering and Technology (UET), Lahore</h3>
-                        <div class="subheading mb-3">Bachelor of Science in Electrical Engineering</div>
-                        <div>Graduated on 25th May 2025</div>
-                        <p>
-                            Focused on embedded systems, machine learning, circuit analysis, and Python programming, with growing expertise in medical instrumentation and automation. Actively engaged in university projects and technical societies, developing strong leadership, teamwork, and communication skills while continuously enhancing technical depth across both hardware and AI domains.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">November 2021 - May 2025</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<section id="work" style="background: #0E1A24; color: #E8EBE6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #F08A5D">01 / SELECTED PROJECTS</p>
+<h2 style="margin: 0 0 48px; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-weight: 600; color: #FFFFFF">Work I have been close to</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1px; background: #2A3945; border: 1px solid #2A3945">
 
-        <!-- Internships Section -->
-        <section class="resume-section" id="experience" data-aos="fade-left">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Internships</h2>
-                <h3>Electrical Engineering Internships</h3>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">AI DATA CENTER · LIQUID COOLED</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">AI factory layout, GB300 and Vera Rubin NVL72</h3>
+<p style="margin: 0; color: #C3CDD4">Phased 9-year floor layout for NVL72 racks with in-row CDUs, built on Schneider Electric reference designs RD110 and RD113. Covered rack rows, CDU placement and liquid cooling distribution.</p>
+</article>
 
-                    <div class="flex-grow-1">
-                        <h4 class="mb-0">Electrical Engineering Intern</h4>
-                        <div class="subheading mb-3">Pakistan Railways, Lahore</div>
-                        <p>
-                            Gained hands-on experience with electrical systems and industrial control equipment used in railway infrastructure. Assisted in the inspection, maintenance, and troubleshooting of signaling systems, power distribution units, and relay-based circuits. Observed practical applications of safety protocols and power management in large-scale public transportation systems.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2023 - August 2023</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
-                    <!-- Internship at Doctors Hospital -->
-                    <div class="flex-grow-1">
-                        <h4 class="mb-0">AI Internship</h4>
-                        <div class="subheading mb-3">Punjab Safe City Authority, Lahore</div>
-                        <p>
-                            Worked on a vision-based crowd monitoring system using CCTV data for public safety analytics and real-time surveillance applications.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">October 2024 - January 2025</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">SKY47 · ISLAMABAD · TIER III</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">Prefabricated data center, Huawei FusionDC 1000A</h3>
+<p style="margin: 0; color: #C3CDD4">Pakistan's first FusionDC 1000A. Worked through the design phase, then ran site technical office and document control: WIR, ITP, method statements and RFIs.</p>
+</article>
 
-        <!-- Skills Section -->
-        <section class="resume-section" id="skills" data-aos="fade-up">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Technical Skills</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-tensorflow"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-microsoft"></i></li>
-                </ul>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Programming Languages: Python
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Machine Learning Frameworks: TensorFlow, Keras, Scikit-learn
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Tools: Arduino IDE, Jupyter Notebook, MATLAB, Keil Uvison, Proteus, Kaggle, Visual Studio Code, Latex, Microsoft Office
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Technologies: Internet of Things, Embedded Systems, Machine Learning, Deep Learning, Computer Vision
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Electrical Systems and Automation
-                    </li>
-                </ul>
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">INDUS CLOUD · CBD LAHORE · TIER III</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">Multi-discipline design review</h3>
+<p style="margin: 0; color: #C3CDD4">Reviewed fire suppression (FK-5-1-12 against NFPA 2001 and ISO 14520), fire alarm, ELV, electrical and MEP design. Kept the observation tracker through ten revisions and ran technical evaluation of vendor bids.</p>
+</article>
 
-                <!-- Technical Skills with Progress Bars -->
-                <h3 class="mt-4">Technical Proficiency</h3>
-                <div class="mb-3">
-                    <label for="python" class="form-label">Python</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" data-percentage="90" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="machine-learning" class="form-label">MATLAB</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" data-percentage="85" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="data-science" class="form-label">Embedded Systems</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" data-percentage="80" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="computer-vision" class="form-label">Machine Learning</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" data-percentage="75" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">75%</div>
-                    </div>
-                </div>
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">TIER III · 2N · 880 KW IT</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">Mini AI data center single line diagram</h3>
+<p style="margin: 0; color: #C3CDD4">Full SLD for a dual-path 2N power system serving 880 kW of IT load, from utility and generators down to rack distribution.</p>
+</article>
 
-                <!-- Soft Skills with Progress Bars -->
-                <h3 class="mt-4">Soft Skills</h3>
-                <div class="mb-3">
-                    <label for="leadership" class="form-label">Leadership and Team Management</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" data-percentage="85" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="problem-solving" class="form-label">Problem Solving and Analytical Thinking</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" data-percentage="90" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="communication" class="form-label">Excellent Communication and Presentation Skills</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" data-percentage="80" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="project-management" class="form-label">Project Management Experience</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" data-percentage="75" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">75%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="teamwork" class="form-label">Ability to Work in a Team Environment</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" data-percentage="85" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">85%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">NADRA · LAHORE AND SARGODHA</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">Commissioning and server room audit</h3>
+<p style="margin: 0; color: #C3CDD4">Supported Tier III commissioning at NADRA RHO Lahore. Wrote a technical audit of the Sargodha server room covering power and cooling, with three upgrade options.</p>
+</article>
 
-        <!-- Projects Section -->
-        <section class="resume-section" id="projects" data-aos="fade-right">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Projects</h2>
-                <h3>Electrical Engineering Projects</h3>
-                <ul class="mb-0">
-                    <li>
-                        <strong>IoT-Based Fan Performance Monitoring System:</strong> Designed a real-time system using Arduino Uno, Mega 2560, and ESP32 to monitor RPM, power, temperature, and airflow. Integrated sensors (LM35, TCRT5000), developed ML models for fault prediction, and designed custom PCBs using Proteus.
-                    </li>
-                    <li>
-                        <strong>Electrical Load Estimation for Lab Equipment:</strong> Performed real-time power consumption analysis and load balancing for engineering lab systems.
-                    </li>
-                    <li>
-                        <strong>Basic Mobile Phone using STM32:</strong> Developed a simple mobile phone prototype using STM32 microcontroller to perform basic texting and calling functions through GSM module integration.
-                    </li>
-                </ul>
-                <h3 class="mt-5">AI & Machine Learning Projects</h3>
-                <ul class="mb-0">
-                    <li>
-                        <strong>Brain Tumor Classification using CNNs:</strong> Achieved 98% accuracy by training DenseNet121, VGG16, and custom CNN models on MRI datasets. Presented results at ETECTE’24.
-                    </li>
-                    <li>
-                        <strong>Brain Tumor Segmentation using 3D U-Net:</strong> Built a segmentation model enhanced with Grad-CAM-based Explainable AI, optimized with Dice coefficient and IoU metrics.
-                    </li>
-                    <li>
-                        <strong>Crowd Monitoring System – Punjab Safe City Authority:</strong> Contributed to a vision-based surveillance system for real-time crowd monitoring and abnormal behavior detection using CCTV video feeds. Implemented detection algorithms and worked on data preprocessing and ML integration for public safety insights.
-                    </li>
-                </ul>                
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<article style="background: #0E1A24; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9FB0BC">TENDERS · PROCUREMENT</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; color: #FFFFFF">Bids, BOQs and compliance reviews</h3>
+<p style="margin: 0; color: #C3CDD4">SOW and BOQ analysis for data center tenders, pre-bid queries, and compliance checks of generator and LV switchgear offers against client specs. Currently owning the CCTV lot of a security RFP.</p>
+</article>
 
+</div>
+</div>
+</section>
 
- 
+<section style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 24px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B4380A">02 / TOOLS I BUILT</p>
+<h2 style="margin: 0 0 40px; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-weight: 600">Small tools for real problems</h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<li style="padding: 24px; background: #FFFFFF; border: 1px solid #D5D8D2; border-radius: 6px">
+<h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600">Clean agent calculator</h3>
+<p style="margin: 0; color: #33424E; font-size: 15px">Multi-zone FK-5-1-12 quantity calculation for gas suppression design.</p>
+</li>
+<li style="padding: 24px; background: #FFFFFF; border: 1px solid #D5D8D2; border-radius: 6px">
+<h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600">LV cable and breaker sizing</h3>
+<p style="margin: 0; color: #33424E; font-size: 15px">IEC-based calculator that sizes cables and protective devices together.</p>
+</li>
+<li style="padding: 24px; background: #FFFFFF; border: 1px solid #D5D8D2; border-radius: 6px">
+<h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600">CCTV site survey form</h3>
+<p style="margin: 0; color: #33424E; font-size: 15px">Structured questionnaire the team uses before quoting surveillance work.</p>
+</li>
+<li style="padding: 24px; background: #FFFFFF; border: 1px solid #D5D8D2; border-radius: 6px">
+<h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 600">Rack access control app</h3>
+<p style="margin: 0; color: #33424E; font-size: 15px">Architecture for a web app managing TANlock rack door access.</p>
+</li>
+</ul>
+</section>
 
-        <!-- Extracurricular Activities Section -->
-        <section class="resume-section" id="extracurricular" data-aos="fade-left">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Extracurricular Activities</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-star text-warning"></i>
-                        Assistant Director Technical – IEEE student Chapter (May 2023 - May 2024)
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-star text-warning"></i>
-                        Member of IEEE Core Body (April 2023 - May 2024)
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-star text-warning"></i>
-                        Webmaster – IEEE Student Branch (March 2024 - May 2025)
-                    </li>
-                    
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<section id="skills" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 24px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B4380A">03 / SKILLS</p>
+<h2 style="margin: 0 0 40px; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-weight: 600">What I work on</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 32px">
+<div>
+<h3 style="margin: 0 0 12px; padding-bottom: 12px; border-bottom: 2px solid #0E1A24; font-size: 18px; font-weight: 600">Power</h3>
+<p style="margin: 0; color: #33424E">SLDs, UPS topology (N+1, 2N), transformer and genset sizing, ATS, earthing, SPD, IEC 60898 and 60947-2 protection</p>
+</div>
+<div>
+<h3 style="margin: 0 0 12px; padding-bottom: 12px; border-bottom: 2px solid #0E1A24; font-size: 18px; font-weight: 600">Cooling</h3>
+<p style="margin: 0; color: #33424E">CRAC and chiller systems, in-row CDUs, direct liquid cooling for AI racks, PUE and efficiency metrics</p>
+</div>
+<div>
+<h3 style="margin: 0 0 12px; padding-bottom: 12px; border-bottom: 2px solid #0E1A24; font-size: 18px; font-weight: 600">Fire and ELV</h3>
+<p style="margin: 0; color: #33424E">FK-5-1-12 suppression, VESDA, fire alarm, CCTV, access control, DCIM and BMS over Modbus, BACnet and SNMP</p>
+</div>
+<div>
+<h3 style="margin: 0 0 12px; padding-bottom: 12px; border-bottom: 2px solid #0E1A24; font-size: 18px; font-weight: 600">Delivery</h3>
+<p style="margin: 0; color: #33424E">BOQ and SOW analysis, compliance matrices, vendor evaluation, WIR, ITP, method statements, RFIs. AutoCAD, SketchUp, Excel, Python</p>
+</div>
+</div>
+</section>
 
-        <!-- Languages Section -->
-        <section class="resume-section" id="languages" data-aos="fade-up">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Languages</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-language text-primary"></i>
-                        <strong>Urdu:</strong> Native Speaker
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-language text-primary"></i>
-                        <strong>English:</strong> Highly Proficient
-                    </li>
-                </ul>
+<section id="certs" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B4380A">04 / CERTIFICATIONS AND EDUCATION</p>
+<h2 style="margin: 0 0 40px; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-weight: 600">Credentials</h2>
+<ul style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #D5D8D2">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid #D5D8D2">
+<span style="font-weight: 500">Huawei HCSA-Sales, Data Center Facility (H19-105)</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #56636E">Valid to 2028</span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid #D5D8D2">
+<span style="font-weight: 500">Huawei HCSA-Field, Data Center Facility</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #56636E">Certified</span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid #D5D8D2">
+<span style="font-weight: 500">NVIDIA NCA-AIIO, AI Infrastructure and Operations</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #B4380A">In progress</span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid #D5D8D2">
+<span style="font-weight: 500">Schneider Electric training, AI infrastructure liquid cooling</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #56636E">Completed</span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid #D5D8D2">
+<span style="font-weight: 500">BSc Electrical Engineering, UET Lahore</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #56636E">2021 to 2025</span>
+</li>
+</ul>
+</section>
 
-                <!-- Language Proficiency with Progress Bars -->
-                <h3 class="mt-4">Language Proficiency</h3>
-                <div class="mb-3">
-                    <label for="urdu" class="form-label">Urdu</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" data-percentage="100" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">100%</div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="english" class="form-label">English</label>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" data-percentage="90" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0 svg-divider" data-aos="fade-up" />
+<section id="contact" style="border-top: 1px solid #D5D8D2; background: #E8EBE6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px">
+<div style="max-width: 560px">
+<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B4380A">05 / CONTACT</p>
+<h2 style="margin: 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-weight: 600">Hiring for a data center team? Let's talk.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 18px">
+<a href="mailto:masabtariq6@gmail.com" style="padding: 6px 0">masabtariq6@gmail.com</a>
+<a href="tel:+923256247847" style="padding: 6px 0">+92 325 624 7847</a>
+<a href="https://linkedin.com/in/muhammad-masab3212" style="padding: 6px 0">linkedin.com/in/muhammad-masab3212</a>
+</div>
+</div>
+</section>
 
-      
+<footer style="max-width: 1200px; margin: 0 auto; padding: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #56636E">© 2026 Muhammad Masab · Lahore</footer>
 
-        <!-- Publications Section -->
-        <section class="resume-section" id="publications" data-aos="fade-up">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Publications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-book text-primary"></i>
-                        Muhammad Masab, et al. "A Comparative Study of DenseNet121, VGG16, and Custom CNNs for Brain Tumor Classification using MRI Images"
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Back to Top Button -->
-        <button id="backToTop" class="btn btn-primary" title="Back to Top">
-            <i class="fas fa-chevron-up"></i>
-        </button>
-    </div>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS JS for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <!-- Core Theme JS -->
-    <script src="js/scripts.js"></script>
+</div>
 </body>
 </html>
